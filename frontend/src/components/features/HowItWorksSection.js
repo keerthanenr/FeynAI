@@ -24,7 +24,7 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <div className="w-full max-w-[1440px] flex flex-col"> {/* Matched hero section width */}
+    <div className="w-full max-w-[1440px] flex flex-col mb-24"> {/* Matched hero section width */}
       <h1 className="text-5xl sm:text-4xl font-semibold mt-16 mb-12">
         How it works
       </h1>
