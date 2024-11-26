@@ -7,19 +7,19 @@ export default function HowItWorksSection() {
       imageSrc: "/images/explain.png",
       altText: "Step 1",
       title: "Explain",
-      description: "You start by choosing a topic you want to talk about. FeynAI takes on the role of a curious 12-year-old, listening as you explain the concept in simple terms."
+      description: "You start by choosing a topic you want to talk about. Feyn the curious 12-year-old intriqued will listen attentively as you explain the concept in simple terms."
     },
     {
       imageSrc: "/images/question.png",
       altText: "Step 2",
       title: "Question",
-      description: "The AI acts like a curious child, asking you follow-up questions to reveal gaps in your understanding or unclear points, pushing you to refine your explanation until the concept is fully understood."
+      description: "Being the curious 12-year-old he is, Feyn will ask follow-up questions that might reveal gaps in your understanding, pushing you to refine your explanation until the concept is fully understood."
     },
     {
       imageSrc: "/images/review.png",
       altText: "Step 3",
       title: "Review",
-      description: "If you hesitate, struggle to explain clearly, or rely on jargon without clarification, the session ends—reinforcing the idea that simplicity and clarity show true understanding, as taught by the Feynman Technique: \"If you want to master something, teach it.\""
+      description: "If you hesitate, use unclear explanations, or rely on jargon, the conversation ends, review and try again. The goal is to explain your topic simply and clearly to Feyn, without being tripped up by his follow-up questions."
     }
   ];
 
