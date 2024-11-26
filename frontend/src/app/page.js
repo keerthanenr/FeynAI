@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "@/components/layout/Header";
 import HowItWorksSection from "@/components/features/HowItWorksSection";
 import HeroSection from "@/components/features/HeroSection";
+import Button from "@/components/ui/Button";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       </header>
       <main className="flex flex-col flex-grow items-center justify-start p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <HeroSection />
-        <HowItWorksSection />      
+        <HowItWorksSection />
+        <Button>Meet Feyn</Button>      
       </main>
     </div>
   );
