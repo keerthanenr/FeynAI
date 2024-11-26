@@ -11,7 +11,7 @@ export default function HeroSection() {
           height={600}
           className="w-[1440px] h-[600px] object-cover rounded-lg"
         >
-          <source src="/images/curious3.mp4" type="video/mp4" />
+          <source src="/images/curious.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-black/20 rounded-lg" />
