@@ -8,7 +8,7 @@ export default function HeroSection() {
           src="/images/stargaze.png"
           alt="Stargaze"
           width={1440}
-          height={768}
+          height={400}
           className="object-contain rounded-lg"
           priority
         />

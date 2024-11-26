@@ -24,11 +24,11 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <div className="w-full max-w-[1440px] flex flex-col"> {/* Same max-width as hero */}
-      <h1 className="text-5xl sm:text-4xl font-semibold mt-16 mb-12"> {/* Increased bottom margin */}
+    <div className="w-full max-w-[1440px] flex flex-col"> {/* Matched hero section width */}
+      <h1 className="text-5xl sm:text-4xl font-semibold mt-16 mb-12">
         How it works
       </h1>
-      <div className="grid grid-cols-3 gap-8 w-full"> {/* Changed to grid for even spacing */}
+      <div className="grid grid-cols-3 gap-12 w-full"> {/* Increased gap for better spacing */}
         {steps.map((step, index) => (
           <StepCard
             key={index}
