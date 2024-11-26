@@ -14,7 +14,7 @@ const geistMono = localFont({
 
 export const metadata = {
   title: "FeynAI",
-  description: "If you know, you know",
+  description: "If you know, you.",
 };
 
 export default function RootLayout({ children }) {
