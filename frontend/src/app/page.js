@@ -1,10 +1,20 @@
 import Image from "next/image";
+import Header from "@/components/layout/Header";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        FeynAI
+    <div className="min-h-screen flex flex-col">
+      <header className="flex justify-center items-center py-4 border-b">
+        <Header />
+      </header>
+      <main className="flex flex-col flex-grow items-center justify-start p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+        <Image
+          src="/images/stargaze.png"
+          alt="Stargaze"
+          width={1440}
+          height={768}
+          className="object-contain rounded-xl mt-4"
+        />
       </main>
     </div>
   );
