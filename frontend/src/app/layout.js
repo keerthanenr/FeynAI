@@ -13,7 +13,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "FeynAI",
+  title: "Feyn by FeynAI",
   description: "If you know, you.",
 };
 
