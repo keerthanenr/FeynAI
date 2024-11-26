@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="snap-y snap-mandatory">
       <div className="min-h-screen flex flex-col snap-start">
-        <header className="flex justify-center items-center py-4 border-b">
+        <header className="flex justify-center items-center py-4">
           <Header />
         </header>
         <main className="flex flex-col flex-grow items-center justify-start p-8 sm:p-20 font-[family-name:var(--font-geist-sans)]">
