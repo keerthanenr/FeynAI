@@ -18,7 +18,7 @@ export default function HeroSection() {
         <div className="absolute left-36 top-2/3 transform -translate-y-1/3 text-white sm:text-xl font-semibold z-10">
           <h1 className="text-4xl sm:text-5xl mb-2">If you know, you know.</h1>
           <p className="text-lg sm:text-xl">
-            Simulate conversations with a curious 12-year-old to help you master topics through teaching.
+            Explain topics through engaging conversations with a curious 12-year-old to help you master subjects through teaching.
           </p>
         </div>
       </div>
