@@ -1,6 +1,6 @@
-// src/components/features/HowItWorksSection.js
 import StepCard from "./StepCard";
 
+// Displays the three-step process of how users interact with Feyn to learn through teaching
 export default function HowItWorksSection() {
   const steps = [
     {
@@ -24,11 +24,11 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <div className="w-full max-w-[1440px] flex flex-col mb-24"> {/* Matched hero section width */}
+    <div className="w-full max-w-[1440px] flex flex-col mb-24">
       <h1 className="text-5xl sm:text-4xl font-semibold mt-16 mb-12">
         How it works
       </h1>
-      <div className="grid grid-cols-3 gap-12 w-full"> {/* Increased gap for better spacing */}
+      <div className="grid grid-cols-3 gap-12 w-full">
         {steps.map((step, index) => (
           <StepCard
             key={index}

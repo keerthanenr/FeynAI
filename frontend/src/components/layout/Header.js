@@ -1,6 +1,6 @@
-// src/components/layout/Header.js
 import Button from "@/components/ui/Button";
 
+// Header reusable component.
 export default function Header() {
   return (
     <header className="flex items-center justify-between w-full max-w-[1440px] relative mt-10">
