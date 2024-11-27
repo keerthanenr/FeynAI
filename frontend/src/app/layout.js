@@ -1,3 +1,4 @@
+// src/app/layout.js
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -14,10 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${helveticaNueueMedium.variable} antialiased`}
-      >
+    <html lang="en" className={helveticaNueueMedium.variable}>
+      <body className="font-helvetica antialiased">
         {children}
       </body>
     </html>
