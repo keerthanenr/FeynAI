@@ -13,6 +13,9 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
+logger.setLevel(level=logging.DEBUG)
+
+#set logger to 
 
 async def process_answer(
     input: Union[str, UploadFile],
@@ -25,9 +28,12 @@ async def process_answer(
     logger.debug("Processing answer started")
     logger.debug(f"Received session_id: {session_id}, topic: {topic}, input type: {type(input)}")
     
+    logger.debug("Processing answer started")
+    logger.debug(f"Received session_id: {session_id}, topic: {topic}, input type: {type(input)}")
+    
     if isinstance(input, str):
         user_answer = input
-    elif isinstance(input, UploadFile):
+    elif True:#isinstance(input, UploadFile)
         temp_file_path = "temp_audio.wav"
         try:
             contents = await input.read()
