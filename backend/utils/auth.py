@@ -1,28 +1,41 @@
 from fastapi import Depends, HTTPException
 from fastapi.security import OAuth2PasswordBearer
-import jwt
-import os
+from sqlalchemy.orm import Session
+from jose import jwt, JWTError
 from utils.db import get_db_session
 from models.user import User
+import os
 
+# OAuth2 setup for token-based authentication
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
-SECRET_KEY = os.getenv("SECRET_KEY")
 
-def get_current_user(token: str = Depends(oauth2_scheme)):
+# Secret key and algorithm for JWT
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = "HS256"
+
+def get_current_user(
+    token: str = Depends(oauth2_scheme), db: Session = Depends(get_db_session)
+):
+    """
+    Validate the provided JWT token and retrieve the authenticated user from the database.
+    """
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=["HS256"])
-        user_id = payload.get("user_id")
-        if user_id is None:
+        # Decode the token
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        user_id: int = payload.get("user_id")
+        if not user_id:
             raise HTTPException(
                 status_code=401, detail="Invalid authentication credentials"
             )
-    except jwt.PyJWTError:
+    except JWTError:
+        # Token decoding error
         raise HTTPException(
             status_code=401, detail="Invalid authentication credentials"
         )
-    db = get_db_session()
+
+    # Query the user from the database
     user = db.query(User).filter(User.id == user_id).first()
-    db.close()
-    if user is None:
+    if not user:
         raise HTTPException(status_code=401, detail="User not found")
+
     return user

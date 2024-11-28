@@ -56,7 +56,7 @@ def generate_ideal_answer(question):
     ideal_answer = call_groq_model(
         system_message=system_message,
         user_prompt=question,
-        model_name="llama3-70b-8192",
+        model_name="llama-3.1-70b-versatile",
         temperature=0.7,
         max_tokens=500,
         top_p=0.9,
@@ -71,7 +71,7 @@ def check_answer(user_answer, ideal_answer):
     score_text = call_groq_model(
         system_message=system_message,
         user_prompt=prompt,
-        model_name="llama3-70b-8192",
+        model_name="llama-3.1-70b-versatile",
         temperature=0.0,
         max_tokens=10,
         top_p=1.0,
@@ -82,7 +82,7 @@ def check_answer(user_answer, ideal_answer):
         score = 0
     return score
 
-def get_follow_up_question(current_question, chat_history, topic):
+def get_follow_up_question(chat_history, topic):
     prompt = get_follow_up_question_prompt(topic, chat_history)
     system_message = (
         "You are a curious 12-year-old child interested in learning about the topic. Based on the conversation so far, ask a new question that is on the topic but not necessarily a direct follow-up. Ensure you do not repeat any previous questions."
@@ -90,7 +90,7 @@ def get_follow_up_question(current_question, chat_history, topic):
     follow_up_question = call_groq_model(
         system_message=system_message,
         user_prompt=prompt,
-        model_name="gemini2-9b-8192",
+        model_name="gemma2-9b-it",
         temperature=0.9,
         max_tokens=100,
         top_p=0.95,
